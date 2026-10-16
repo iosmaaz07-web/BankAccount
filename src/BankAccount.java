@@ -9,12 +9,12 @@ public class BankAccount {
             balance += amount;
         }
     }
-    public void withdraw(double amount){
+    public void withdraw(double amount)throws InsufficientBalanceException{
         if(amount>0 && amount<=balance){
             balance -= amount;
         }
         else{
-            System.out.println("not enough money");
+            throw new InsufficientBalanceException("not enough money");
         }
     }
     public double getBalance(){

@@ -1,8 +1,12 @@
 public class Main {
-    public static void main(String[]args){
+    public static void main(String[] args) {
         BankAccount account = new BankAccount(1000);
         account.deposit(500);
-        account.withdraw(300);
-        System.out.println("Balance: " + account.getBalance());
+        try {
+            account.withdraw(1502);
+        } catch (InsufficientBalanceException e) {
+            System.out.println("error:" + e.getMessage());
+
+        }
     }
 }
