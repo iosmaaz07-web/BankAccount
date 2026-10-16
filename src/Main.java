@@ -8,5 +8,8 @@ public class Main {
             System.out.println("error:" + e.getMessage());
 
         }
+        SavingsAccount savings = new SavingsAccount(1000,5);
+        savings.addInterest();
+        System.out.println("savings balance:" + savings.getBalance());
     }
 }
