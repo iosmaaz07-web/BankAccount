@@ -1,4 +1,4 @@
-public class BankAccount {
+public class BankAccount implements Account {
     private double balance;
 
     public BankAccount(double initialBalance){

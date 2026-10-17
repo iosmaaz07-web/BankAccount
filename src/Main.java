@@ -11,5 +11,9 @@ public class Main {
         SavingsAccount savings = new SavingsAccount(1000,5);
         savings.addInterest();
         System.out.println("savings balance:" + savings.getBalance());
+
+        Account acc = new SavingsAccount(2000,5);
+        acc.deposit(500);
+        System.out.println("account balance: " + acc.getBalance());
     }
 }
